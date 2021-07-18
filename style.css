@@ -1,14 +1,11 @@
 body {
   margin: 0;
-  padding: 0;
 }
 
 .container {
   font-family: "Big Shoulders Display", cursive;
-  font-size: 15px;
+  font-size: 20px;
   color: hsl(0, 0%, 95%);
-  display: grid;
-  place-items: center;
 }
 
 .cards {
@@ -21,6 +18,7 @@ body {
   background-color: hsl(31, 77%, 52%);
   margin-top: 50px;
 }
+
 .card2 {
   background-color: hsl(184, 100%, 22%);
 }
@@ -34,12 +32,57 @@ body {
 .cardpar {
   font-family: "Lexend Deca", sans-serif;
   color: hsla(0, 0%, 100%, 0.75);
+  font-size: 10px;
+  line-height: 1.6;
+  padding-bottom: 20px;
 }
 
 .btn {
-  height: 40px;
-  width: auto;
+  border-radius: 0.75rem;
+  border: none;
+  min-height: 2.5rem;
+  min-width: 7rem;
   color: hsl(179, 100%, 13%);
   border-radius: 25px;
-  border-color: none;
+  outline: none;
+}
+
+.btn:focus {
+  color: hsla(0, 0%, 100%, 0.75);
+  border: 2px solid hsla(0, 0%, 100%, 0.75);
+  background: none;
+}
+
+.btn-1 {
+  font-family: "Lexend Deca", sans-serif;
+  color: hsl(31, 77%, 52%);
+}
+.btn-2 {
+  font-family: "Lexend Deca", sans-serif;
+  color: hsl(184, 100%, 22%);
+}
+.btn-3 {
+  font-family: "Lexend Deca", sans-serif;
+  color: hsl(179, 100%, 13%);
+}
+
+@media only screen and (max-width: 375px) {
+  .container {
+    display: grid;
+    place-items: center;
+  }
+}
+
+@media only screen and (min-width: 375px) {
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .cards {
+    margin: 0;
+    border-radius: 0px;
+  }
 }
